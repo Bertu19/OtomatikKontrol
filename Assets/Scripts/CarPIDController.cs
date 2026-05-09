@@ -77,7 +77,7 @@ public class CarPIDController : MonoBehaviour
 
         controlSignal = Mathf.Clamp(controlSignal, -1f, 1f);
 
-        // 5. DÝNAMÝK YÖNLENDÝRME (TORK UYGULAMASI) - KÜTLENÝN ETKÝ ETTÝÐÝ YER BURASIDIR!
+        // 5. DÝNAMÝK YÖNLENDÝRME (TORK UYGULAMASI) - KÜTLENÝN ETKÝ ETTÝÐÝ YER
         // u(t) sinyalini bir fiziksel kuvvet momentine (Torque) çevirip arabanýn Y eksenine uyguluyoruz
         float appliedTorque = -controlSignal * torqueMultiplier;
         rb.AddTorque(transform.up * appliedTorque, ForceMode.Force);
